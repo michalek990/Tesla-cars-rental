@@ -143,7 +143,7 @@ public class DataBaseSeeder
                         Model = "Tesla Model X",
                         HorsePower = 270,
                         VIN = "yb8d72gZbRaodHqct",
-                        YearOfProduction = 0,
+                        YearOfProduction = 2020,
                         Available = true,
                     },
                     new Car()
@@ -151,7 +151,7 @@ public class DataBaseSeeder
                         Model = "Tesla Model Y",
                         HorsePower = 350,
                         VIN = "d1CyXniT1IvL1XwOn",
-                        YearOfProduction = 0,
+                        YearOfProduction = 2021,
                         Available = true,
                     },
                     new Car()
@@ -159,7 +159,7 @@ public class DataBaseSeeder
                         Model = "Tesla Model 3",
                         HorsePower = 400,
                         VIN = "v0YgbjvnLL7Rod1Le",
-                        YearOfProduction = 0,
+                        YearOfProduction = 2022,
                         Available = true,
                     }
                 }
