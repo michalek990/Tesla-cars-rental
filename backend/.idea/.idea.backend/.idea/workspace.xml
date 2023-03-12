@@ -5,9 +5,7 @@
     <projectFile profileName="backend">backend/backend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15d23a97-3324-4bd6-82b5-0d7638721dfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="15d23a97-3324-4bd6-82b5-0d7638721dfd" name="Changes" comment="workspace file update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +81,7 @@
       <workItem from="1678579159055" duration="777000" />
       <workItem from="1678580922128" duration="71000" />
       <workItem from="1678624605587" duration="1482000" />
-      <workItem from="1678639380432" duration="4069000" />
+      <workItem from="1678639380432" duration="4408000" />
     </task>
     <task id="LOCAL-00001" summary="Delete unnecesary files and test github workflows">
       <created>1678539555425</created>
@@ -113,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678643135615</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="workspace file update">
+      <created>1678644177865</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678644177865</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +155,7 @@
     <MESSAGE value="Create database model" />
     <MESSAGE value="Implement dbContext in program.cs" />
     <MESSAGE value="Repository pattern and unitOfWork" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repository pattern and unitOfWork" />
+    <MESSAGE value="workspace file update" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace file update" />
   </component>
 </project>
