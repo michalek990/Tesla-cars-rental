@@ -5,7 +5,10 @@
     <projectFile profileName="backend">backend/backend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15d23a97-3324-4bd6-82b5-0d7638721dfd" name="Changes" comment="Create database model" />
+    <list default="true" id="15d23a97-3324-4bd6-82b5-0d7638721dfd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +82,7 @@
       <workItem from="1678580922128" duration="71000" />
       <workItem from="1678624605587" duration="1482000" />
       <workItem from="1678639380432" duration="994000" />
+      <workItem from="1678644413276" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="Delete unnecesary files and test github workflows">
       <created>1678539555425</created>
@@ -113,7 +117,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/#4-Create-database-project" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>
