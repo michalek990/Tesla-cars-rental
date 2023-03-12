@@ -24,4 +24,4 @@ jobs:
 defaults:
   run:
     shell: bash
-    working-directory: ./services
+    working-directory: ./
