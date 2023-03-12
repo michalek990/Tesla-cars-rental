@@ -5,25 +5,42 @@
     <projectFile profileName="backend">backend/backend.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15d23a97-3324-4bd6-82b5-0d7638721dfd" name="Changes" comment="" />
+<<<<<<< HEAD
+    <list default="true" id="15d23a97-3324-4bd6-82b5-0d7638721dfd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/backend/obj/rider.project.restore.info" afterDir="false" />
+    </list>
+=======
+    <list default="true" id="15d23a97-3324-4bd6-82b5-0d7638721dfd" name="Changes" comment="workspace file update" />
+>>>>>>> origin/develop
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Michal/Desktop/Tesla cars rental/backend/backend/Program.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2MrvZe4pr6qa93NUnNzRBUYffDI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.backend">
     <configuration name="backend" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/backend/backend.csproj" />
@@ -65,14 +82,92 @@
       <option name="presentableId" value="Default" />
       <updated>1678538573420</updated>
       <workItem from="1678538576585" duration="4000" />
+      <workItem from="1678539510172" duration="533000" />
+      <workItem from="1678540237474" duration="5930000" />
+      <workItem from="1678553066643" duration="4007000" />
+      <workItem from="1678579159055" duration="777000" />
+      <workItem from="1678580922128" duration="71000" />
+      <workItem from="1678624605587" duration="1482000" />
+<<<<<<< HEAD
+      <workItem from="1678639380432" duration="994000" />
+      <workItem from="1678644413276" duration="46000" />
+=======
+      <workItem from="1678639380432" duration="4408000" />
+>>>>>>> origin/develop
     </task>
+    <task id="LOCAL-00001" summary="Delete unnecesary files and test github workflows">
+      <created>1678539555425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678539555425</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Create database model">
+      <created>1678640581481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678640581481</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement dbContext in program.cs">
+      <created>1678640771378</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678640771378</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Repository pattern and unitOfWork">
+      <created>1678643135615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678643135615</updated>
+    </task>
+    <task id="LOCAL-00005" summary="workspace file update">
+      <created>1678644177865</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678644177865</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Delete unnecesary files and test github workflows" />
+    <MESSAGE value="Create database model" />
+    <MESSAGE value="Implement dbContext in program.cs" />
+    <MESSAGE value="Repository pattern and unitOfWork" />
+    <MESSAGE value="workspace file update" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace file update" />
   </component>
 </project>
