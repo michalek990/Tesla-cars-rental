@@ -20,7 +20,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
+      <Folder Include="Service\Rental\Commands\DeleteRental" />
+      <Folder Include="Service\Rental\Commands\UpdateRental" />
+      <Folder Include="Service\Rental\Queries" />
     </ItemGroup>
 
 </Project>

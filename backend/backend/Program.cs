@@ -16,6 +16,9 @@ builder.Services.AddControllers().AddFluentValidation();
 builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+builder.Services.AddScoped<ICarRepository, CarRepostitory>();
+builder.Services.AddScoped<IRentalRepository, RentalRepository>();
+builder.Services.AddScoped<IRentalPointRepository, RentalPointRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

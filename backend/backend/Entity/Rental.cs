@@ -6,8 +6,8 @@ public class Rental : BaseEntity
 {
     public string FirstName { get; set; }
     public string Surname { get; set; }
-    public decimal PeselNumber { get; set; }
-    public decimal ContactNumber { get; set; }
+    public string PeselNumber { get; set; }
+    public int ContactNumber { get; set; }
     public Nationality Nationality { get; set; }
     public Gender Gender { get; set; }
     public DateTime RentalDateStart { get; set; }

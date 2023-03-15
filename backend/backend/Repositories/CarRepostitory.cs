@@ -22,7 +22,7 @@ public class CarRepostitory : BaseRepository<Car>, ICarRepository
             .AnyAsync();    
     }
 
-    public async Task<bool?> IsCarAvailable(string model, int rentalPointId)
+    public async Task<bool> IsCarAvailable(string model, int rentalPointId)
     {
         return await Context.Cars
             .Where(c => c.Model == model && c.RentalPointId == rentalPointId)

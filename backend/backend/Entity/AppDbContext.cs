@@ -43,6 +43,18 @@ public class AppDbContext : DbContext
             .Property(a => a.ContactNumber)
             .IsRequired()
             .HasMaxLength(9);
+
+        modelBuilder.Entity<Rental>()
+            .Property(a => a.Nationality)
+            .IsRequired()
+            .HasConversion<string>();
+
+        modelBuilder.Entity<Rental>()
+            .Property(a => a.Gender)
+            .IsRequired()
+            .HasConversion<string>();
+
+
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

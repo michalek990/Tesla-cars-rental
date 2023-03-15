@@ -69,9 +69,9 @@ namespace backend.Migrations
                     b.Property<int>("CarId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("ContactNumber")
+                    b.Property<int>("ContactNumber")
                         .HasMaxLength(9)
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("int");
 
                     b.Property<int>("EndRentalPointId")
                         .HasColumnType("int");
@@ -86,9 +86,10 @@ namespace backend.Migrations
                     b.Property<int>("Nationality")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("PeselNumber")
+                    b.Property<string>("PeselNumber")
+                        .IsRequired()
                         .HasMaxLength(11)
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<DateTime>("RentalDateEnd")
                         .HasColumnType("datetime2");
