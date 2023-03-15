@@ -12,23 +12,21 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Rental>()
-            .HasOne(x => x.StartRentalPoint)
-            .WithOne(x => x.StartRental)
-            .HasForeignKey<Rental>(x => x.StartRentalPointId)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+        modelBuilder.Entity<RentalPoint>()
+            .HasMany(x => x.StartRentals)
+            .WithOne(x => x.StartRentalPoint)
+            .IsRequired(false);
 
-        modelBuilder.Entity<Rental>()
-            .HasOne(x => x.EndRentalPoint)
-            .WithOne(x => x.EndRental)
-            .HasForeignKey<Rental>(x => x.EndRentalPointId)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+        modelBuilder.Entity<RentalPoint>()
+            .HasMany(x => x.EndRentals)
+            .WithOne(x => x.EndRentalPoint)
+            .IsRequired(false);
 
         modelBuilder.Entity<Car>()
             .Property(a => a.VIN)
             .IsRequired()
             .HasMaxLength(17);
-        
+            
         modelBuilder.Entity<RentalPoint>()
             .Property(a => a.Number)
             .IsRequired()
@@ -43,6 +41,18 @@ public class AppDbContext : DbContext
             .Property(a => a.ContactNumber)
             .IsRequired()
             .HasMaxLength(9);
+
+        modelBuilder.Entity<Rental>()
+            .Property(a => a.Nationality)
+            .IsRequired()
+            .HasConversion<string>();
+
+        modelBuilder.Entity<Rental>()
+            .Property(a => a.Gender)
+            .IsRequired()
+            .HasConversion<string>();
+
+
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
