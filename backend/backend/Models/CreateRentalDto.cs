@@ -3,18 +3,21 @@ using backend.Entity;
 
 namespace backend.Models;
 
-public sealed record CreateRentalDto(
-    string FirstName,
-    string Surname,
-    string PeselNumber,
-    int ContactNumber,
-    Nationality Nationality,
-    Gender Gender,
-    DateTime RentalDateStart,
-    DateTime RentalDateEnd,
-    string CarModel,
-    string StartRentalPointName,
-    string EndRentalPointName);
+public sealed class CreateRentalDto
+{
+    public string FirstName { get; set; }
+    public string Surname { get; set; }
+    public string PeselNumber { get; set; }
+    public int ContactNumber { get; set; }
+    public Nationality Nationality { get; set; }
+    public Gender Gender { get; set; }
+    public DateTime RentalDateEnd { get; set; }
+    public string CarModel { get; set; }
+    public string StartRentalPointName { get; set; }
+    public string EndRentalPointName { get; set; }
+    
+}
+
 
 public sealed class CreateRentalDtoProfile : Profile
 {

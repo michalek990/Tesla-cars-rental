@@ -1,11 +1,23 @@
 ﻿using System.Net;
+using System.Net.Mime;
 using backend.Exceptions;
 using backend.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace backend.Middlewares;
 
 public class ExceptionHandlerMiddleware : IMiddleware
 {
+    private readonly JsonSerializerSettings _jsonSerializerSettings = new()
+    {
+        ContractResolver = new JsonConfiguration { NamingStrategy = new CamelCaseNamingStrategy() },
+        Formatting = Formatting.Indented,
+        TypeNameHandling = TypeNameHandling.None,
+        DateFormatHandling = DateFormatHandling.IsoDateFormat,
+        NullValueHandling = NullValueHandling.Ignore
+    };
+    
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
         try
@@ -23,8 +35,14 @@ public class ExceptionHandlerMiddleware : IMiddleware
         var errorMessage = e switch
         {
             NotFoundException notFoundException => HandleNotFoundException(notFoundException),
-            ConflictException conflictException => HandleConflictException(conflictException)
+            ConflictException conflictException => HandleConflictException(conflictException),
+            _ => HandleUnexpectedException(e)
         };
+
+        context.Response.StatusCode = (int)errorMessage.StatusCode;
+        context.Response.ContentType = MediaTypeNames.Application.Json;
+        await context.Response.WriteAsync(JsonConvert.SerializeObject(errorMessage, _jsonSerializerSettings));
+
     }
 
     private ErrorMessage HandleNotFoundException(NotFoundException e)
@@ -44,6 +62,20 @@ public class ExceptionHandlerMiddleware : IMiddleware
             Title: "Conflict",
             Details: e.Message,
             Timestamp: DateTime.Now
+        );
+    }
+    
+    private ErrorMessage HandleUnexpectedException(Exception e)
+    {
+        Console.WriteLine(e.Message);
+        Console.WriteLine(e.StackTrace);
+
+        return new ErrorMessage
+        (
+            StatusCode: HttpStatusCode.InternalServerError,
+            Title: "Internal server error",
+            Details: "Something went wrong :(",
+            Timestamp: DateTime.UtcNow
         );
     }
 }

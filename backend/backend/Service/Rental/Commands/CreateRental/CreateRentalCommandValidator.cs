@@ -30,15 +30,11 @@ public sealed class CreateRentalCommandValidator : AbstractValidator<CreateRenta
         RuleFor(r => r.Gender)
             .NotNull()
             .IsInEnum();
-
-        RuleFor(r => r.RentalDateStart)
-            .NotNull()
-            .GreaterThanOrEqualTo(DateTime.Now)
-            .LessThanOrEqualTo(DateTime.Now.AddDays(5));
+        
         
         RuleFor(r => r.RentalDateEnd)
             .NotNull()
-            .GreaterThan(r => r.RentalDateStart)
-            .LessThanOrEqualTo(r => r.RentalDateStart.AddDays(20));
+            .GreaterThan(DateTime.Now)
+            .LessThanOrEqualTo(DateTime.Now.AddDays(20));
     }
 }

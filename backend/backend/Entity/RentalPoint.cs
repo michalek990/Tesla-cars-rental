@@ -10,7 +10,6 @@ public class RentalPoint : BaseEntity
     public int Number { get; set; }
  
     public virtual List<Car> Cars { get; set; }
-    
-    public virtual Rental StartRental { get; set; }
-    public virtual Rental EndRental { get; set; }
+    public virtual List<Rental> StartRentals { get; set; }
+    public virtual List<Rental> EndRentals { get; set; }
 }

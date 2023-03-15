@@ -33,6 +33,9 @@ namespace backend.Migrations
                     b.Property<bool>("Available")
                         .HasColumnType("bit");
 
+                    b.Property<double>("CostPerDay")
+                        .HasColumnType("float");
+
                     b.Property<decimal>("HorsePower")
                         .HasColumnType("decimal(18,2)");
 
@@ -80,11 +83,13 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Gender")
-                        .HasColumnType("int");
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Nationality")
-                        .HasColumnType("int");
+                    b.Property<string>("Nationality")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PeselNumber")
                         .IsRequired()
@@ -104,16 +109,17 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("TotalCostOfRent")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CarId")
                         .IsUnique();
 
-                    b.HasIndex("EndRentalPointId")
-                        .IsUnique();
+                    b.HasIndex("EndRentalPointId");
 
-                    b.HasIndex("StartRentalPointId")
-                        .IsUnique();
+                    b.HasIndex("StartRentalPointId");
 
                     b.ToTable("Rentals");
                 });
@@ -166,14 +172,12 @@ namespace backend.Migrations
                         .IsRequired();
 
                     b.HasOne("backend.Entity.RentalPoint", "EndRentalPoint")
-                        .WithOne("EndRental")
-                        .HasForeignKey("backend.Entity.Rental", "EndRentalPointId")
-                        .IsRequired();
+                        .WithMany("EndRentals")
+                        .HasForeignKey("EndRentalPointId");
 
                     b.HasOne("backend.Entity.RentalPoint", "StartRentalPoint")
-                        .WithOne("StartRental")
-                        .HasForeignKey("backend.Entity.Rental", "StartRentalPointId")
-                        .IsRequired();
+                        .WithMany("StartRentals")
+                        .HasForeignKey("StartRentalPointId");
 
                     b.Navigation("Car");
 
@@ -192,11 +196,9 @@ namespace backend.Migrations
                 {
                     b.Navigation("Cars");
 
-                    b.Navigation("EndRental")
-                        .IsRequired();
+                    b.Navigation("EndRentals");
 
-                    b.Navigation("StartRental")
-                        .IsRequired();
+                    b.Navigation("StartRentals");
                 });
 #pragma warning restore 612, 618
         }

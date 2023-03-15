@@ -15,10 +15,10 @@ public class CarRepostitory : BaseRepository<Car>, ICarRepository
             .FirstOrDefaultAsync();
     }
 
-    public async Task<bool> ExistByModelAndRentalPointId(string model, int rentalPointId)
+    public async Task<bool> ExistByModel(string model)
     {
         return await Context.Cars
-            .Where(c => c.Model == model && c.RentalPointId == rentalPointId)
+            .Where(c => c.Model == model)
             .AnyAsync();    
     }
 

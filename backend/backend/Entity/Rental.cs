@@ -12,7 +12,8 @@ public class Rental : BaseEntity
     public Gender Gender { get; set; }
     public DateTime RentalDateStart { get; set; }
     public DateTime RentalDateEnd { get; set; }
-
+    public double TotalCostOfRent { get; set; }
+    
     public int CarId { get; set; }
     public virtual Car Car { get; set; }
     

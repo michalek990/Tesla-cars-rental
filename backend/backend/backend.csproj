@@ -17,11 +17,10 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Service\Rental\Commands\DeleteRental" />
-      <Folder Include="Service\Rental\Commands\UpdateRental" />
       <Folder Include="Service\Rental\Queries" />
     </ItemGroup>
 

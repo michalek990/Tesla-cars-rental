@@ -8,7 +8,13 @@ public class RentalRepository : BaseRepository<Rental>, IRentalRepository
 {
     public RentalRepository(AppDbContext context) : base(context) { }
 
-
+    public async Task<Rental?> GetByPeselCarModelAndEndRentalPoint(string peselNubmer, string model, string endRentalPoint)
+    {
+        return await Context.Rentals
+            .Where(c => c.PeselNumber == peselNubmer && c.Car.Model == model && c.EndRentalPoint.RentalPointName == endRentalPoint)
+            .FirstOrDefaultAsync();
+    }
+    
     public async Task<bool?> ExistByPeselNumber(string pesel)
     {
         return await Context.Rentals

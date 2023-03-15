@@ -10,7 +10,6 @@ public sealed record CreateRentalCommand(
     int ContactNumber,
     Nationality Nationality,
     Gender Gender,
-    DateTime RentalDateStart,
     DateTime RentalDateEnd,
     string CarModel,
     string StartRentalPointName,

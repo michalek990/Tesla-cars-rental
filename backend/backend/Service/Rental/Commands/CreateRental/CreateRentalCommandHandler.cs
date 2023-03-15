@@ -31,13 +31,16 @@ public sealed class CreateRentalCommandHandler : IRequestHandler<CreateRentalCom
                          ?? throw new NotFoundException($"Rental point {request.EndRentalPointName} not found");
         
         var car = await _carRepository.GetCarByModelAndRentalPointId(request.CarModel, startPoint.Id)
-                         ?? throw new NotFoundException($"Car {request.CarModel} from {startPoint} not found");
-
+                         ?? throw new NotFoundException($"Car {request.CarModel} from {startPoint.RentalPointName} not found");
+        
         if (!await _carRepository.IsCarAvailable(request.CarModel, startPoint.Id))
         {
             throw new ConflictException("This car is no available now");
         }
-
+        
+        var daysOfRent = request.RentalDateEnd - DateTime.Now;
+        
+        
         var rental = new Entity.Rental
         {
             FirstName = request.FirstName,
@@ -46,8 +49,9 @@ public sealed class CreateRentalCommandHandler : IRequestHandler<CreateRentalCom
             ContactNumber = request.ContactNumber,
             Nationality = request.Nationality,
             Gender = request.Gender,
-            RentalDateStart = request.RentalDateStart,
+            RentalDateStart = DateTime.Now,
             RentalDateEnd = request.RentalDateEnd,
+            TotalCostOfRent = car.CostPerDay * daysOfRent.Days,
             CarId = car.Id,
             StartRentalPointId = startPoint.Id,
             EndRentalPointId = endPoint.Id
@@ -56,7 +60,7 @@ public sealed class CreateRentalCommandHandler : IRequestHandler<CreateRentalCom
         
         car.Available = false;
         car.RentalPointId = endPoint.Id;
-
+        
         await _unitOfWork.SaveAsync();
 
         return _mapper.Map<CreateRentalDto>(rental);
