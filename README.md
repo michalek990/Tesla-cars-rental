@@ -9,6 +9,9 @@ Pracę rozpocząłem od zaprojektowania bazy danych. Tak wstępnie wyglądał pr
 ![image](https://user-images.githubusercontent.com/93988101/225165478-c847cedc-b748-4f4a-a33c-0b730eda4c41.png)
 </p>
 
+<p align="center">
+  <img src="[https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true](https://user-images.githubusercontent.com/93988101/225165478-c847cedc-b748-4f4a-a33c-0b730eda4c41.png)"/>
+</p>
 
 ##
 
