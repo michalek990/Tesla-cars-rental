@@ -1,7 +1,6 @@
 ﻿using backend.Models;
 using backend.Models.Pagination;
 using backend.Pagination.Response;
-using backend.Service.Car.Queries.GetlAllCars;
 using backend.Service.Rental.Queries.GetlAllRentals;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
