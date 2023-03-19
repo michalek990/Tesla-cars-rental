@@ -56,7 +56,7 @@ Dzięki zastosowaniu wzorca CQRS, możliwe jest zoptymalizowanie wydajności apl
 ![image](https://user-images.githubusercontent.com/93988101/226204924-098b086a-459a-40dd-ba40-b41392979ad8.png)
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/93988101/226204924-098b086a-459a-40dd-ba40-b41392979ad8.png">
+  <img src="https://user-images.githubusercontent.com/93988101/226204924-098b086a-459a-40dd-ba40-b41392979ad8.png">
 </p>
 
 ### 7.3. Wzorzec Unit of work ###
