@@ -5,7 +5,7 @@ Simple CRUD application with rental office offering Tesla cars on mallorca. This
 Pracę rozpocząłem od zaprojektowania bazy danych. Tak wstępnie wyglądał projekt bazy danych dla wypożyczalni.
 
 <p align="center">
-<img serc="https://user-images.githubusercontent.com/93988101/225420185-8829fb72-0da4-4722-860d-4271a12b5975.png">
+<img src="https://user-images.githubusercontent.com/93988101/225420185-8829fb72-0da4-4722-860d-4271a12b5975.png">
 </p>
 
 ##
