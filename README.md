@@ -7,7 +7,7 @@ Pracę rozpocząłem od zaprojektowania bazy danych. Tak wstępnie wyglądał pr
 ![image](https://user-images.githubusercontent.com/93988101/225420185-8829fb72-0da4-4722-860d-4271a12b5975.png)
 
 <p align="center">
-  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/93988101/225420185-8829fb72-0da4-4722-860d-4271a12b5975.png">
 </p>
 
 ##
