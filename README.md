@@ -4,7 +4,9 @@ Simple CRUD application with rental office offering Tesla cars on mallorca. This
 ## 1. Projekt bazy danych ## 
 Pracę rozpocząłem od zaprojektowania bazy danych. Tak wstępnie wyglądał projekt bazy danych dla wypożyczalni.
 
-![image](https://user-images.githubusercontent.com/93988101/225420185-8829fb72-0da4-4722-860d-4271a12b5975.png)
+<p align="center">
+<img serc="https://user-images.githubusercontent.com/93988101/225420185-8829fb72-0da4-4722-860d-4271a12b5975.png">
+</p>
 
 ##
 
@@ -53,8 +55,6 @@ Wzorzec ten zakłada, że aplikacja posiada dwa osobne modele: model komend (Com
 
 Dzięki zastosowaniu wzorca CQRS, możliwe jest zoptymalizowanie wydajności aplikacji poprzez zoptymalizowanie modelu zapytań i modelu komend. Model zapytań może być np. w pełni zdenormalizowany, co pozwala na szybsze wykonywanie zapytań, a model komend może być zoptymalizowany pod kątem szybkiego i bezpiecznego wprowadzania zmian w systemie.
 
-![image](https://user-images.githubusercontent.com/93988101/226204924-098b086a-459a-40dd-ba40-b41392979ad8.png)
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/93988101/226204924-098b086a-459a-40dd-ba40-b41392979ad8.png">
 </p>
@@ -68,8 +68,9 @@ Unit of Work to klasa, która reprezentuje jedną transakcję na bazie danych i 
 
 Repozytorium to interfejs lub klasa, która definiuje metody dostępu do danych, takie jak pobieranie, dodawanie, usuwanie i aktualizacja rekordów w bazie danych. Repozytoria są używane w Unit of Work, aby umożliwić grupowanie operacji na różnych encjach w ramach jednej transakcji.
 
-![image](https://user-images.githubusercontent.com/93988101/226204961-ef5a0115-cae0-46bc-a0c4-bbf19f7e091a.png)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/93988101/226204961-ef5a0115-cae0-46bc-a0c4-bbf19f7e091a.png">
+</p>
 
 ##
 
