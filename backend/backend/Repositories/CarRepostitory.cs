@@ -26,7 +26,7 @@ public class CarRepostitory : BaseRepository<Car>, ICarRepository
             .AnyAsync();
         
     }
-    
+
     public async Task<Page<Car>> GetCarsFromRentalPoint(int rentalPointId, PageRequest<Car> pageRequest)
     {
         var query = Context.Cars

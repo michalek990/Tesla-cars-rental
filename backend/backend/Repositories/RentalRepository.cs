@@ -14,7 +14,29 @@ public class RentalRepository : BaseRepository<Rental>, IRentalRepository
             .Where(c => c.PeselNumber == peselNubmer && c.Car.Model == model && c.EndRentalPoint.RentalPointName == endRentalPoint)
             .FirstOrDefaultAsync();
     }
-    
+
+    public async Task RemoveAllExpiredRentals()
+    {
+        var expiredRentals = await Context.Rentals
+            .Where(r => r.RentalDateEnd < DateTime.Now)
+            .ToListAsync();
+
+        if (expiredRentals != null && expiredRentals.Count > 0)
+        {
+            foreach (var rental in expiredRentals)
+            {
+                var car = await Context.Cars.FindAsync(rental.CarId);
+                if (car != null && car.Available == false)
+                {
+                    car.Available = true;
+                    car.RentalPointId = rental.EndRentalPointId;
+                }
+                Context.Rentals.Remove(rental);
+            }
+            await Context.SaveChangesAsync();
+        }
+    }
+
     public async Task<bool?> ExistByPeselNumber(string pesel)
     {
         return await Context.Rentals

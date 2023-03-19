@@ -4,6 +4,7 @@ using backend.Entity;
 using backend.Interfaces;
 using backend.Middlewares;
 using backend.Repositories;
+using backend.Service.Rental;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -24,6 +25,7 @@ builder.Services.AddScoped<ICarRepository, CarRepostitory>();
 builder.Services.AddScoped<IRentalRepository, RentalRepository>();
 builder.Services.AddScoped<IRentalPointRepository, RentalPointRepository>();
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddHostedService<CheckEndRentalDate>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
