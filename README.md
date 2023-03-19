@@ -23,10 +23,18 @@ Stworzenie zdalnego repozytorium na GitHub oraz wgranie wstępnego projektu stro
 ## 4. Continuous Integration ## 
 Zastosowanie Continuous Integration po stronie serwerowej sprawdzająca poprawność wprowadzania nowych zmian do projektu pod względem kompilacji kodu.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/93988101/226205388-4a8dea3b-8c68-4b70-a376-b1d9006efcb2.png">
+</p>
+
 ##
 
 ## 5. GitFlow ## 
 Prowadzenie projektu w oparciu o GitFlow. Projekt składa się z dwóch głownych gałęzi: Main, Develop. Zadania zostały podzielone na poszczególne Issues. Każda nowa gałąź projektu zakłada wykonanie kolejnego Issue oraz po skończeniu zadania towrzony jest pull request sprawdzający zmiany oraz konfilkty z gałęzią Develop. Jeśli wszystkie zmiany zostały zatwierdzone gałąź Develop jest mergowana do gałęzi Main.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/93988101/226205416-fb3390db-fe33-4d34-89ce-1479fe5e4be9.png">
+</p>
 
 ##
 
@@ -85,7 +93,15 @@ Implementacja napotkanych wyjątków z jakimi będziemy mieli doczynienia w trak
 ## 9. Walidacja nowego wypożyczenia ## 
 Stworzenie walidatora odpowiadającego za walidację danych wprowadzanych podczas tworzenia nowego wypożyczenia.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/93988101/226205337-969effc2-46e5-41c9-a968-5a240e42a3a8.png">
+</p>
+
 ##
 
 ## 10. CRUD opperations ## 
 Implementacja pierwszych funkcji CRUD odnieśnie tworzenia nowego wypożyczenia.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/93988101/226205355-853f99e5-edc0-49a2-8496-43d24ff85ab3.png">
+</p>
