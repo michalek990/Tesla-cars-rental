@@ -36,6 +36,16 @@ Implementacja DataBaseSeeder. Dzięki niemu uzupełniamy bazę danych naszymi po
 ## 7. Wzorce projektowe ## 
 Implementacja wzorców projektowych w celu modernizacji projektu.
 ### 7.1. Wzorzec repozytoriów ###
+Wzorzec repozytoriów w języku C# jest popularnym wzorcem projektowym stosowanym w programowaniu aplikacji, które korzystają z bazy danych. Wzorzec ten służy do izolowania warstwy biznesowej od warstwy danych, co ułatwia testowanie kodu oraz zmiany w bazie danych bez wpływu na kod aplikacji.
+Oto kilka kroków, które warto uwzględnić przy tworzeniu repozytoriów w C#:
+
+1. Utworzenie interfejsu repozytorium - należy stworzyć interfejs, który będzie definiował metody dostępu do danych (np. dodawanie, usuwanie, modyfikowanie). W interfejsie nie powinny znajdować się szczegóły implementacji.
+
+2. Utworzenie klasy repozytorium - klasa ta implementuje interfejs i zawiera logikę dostępu do bazy danych. Warto korzystać z biblioteki ORM (Object-Relational Mapping), która ułatwia mapowanie danych pomiędzy obiektami a bazą danych.
+
+3. Utworzenie kontekstu bazy danych - kontekst bazy danych służy do zarządzania połączeniem z bazą danych oraz śledzeniem zmian. Kontekst ten powinien być wstrzykiwany do repozytoriów za pomocą narzędzia do wstrzykiwania zależności (np. Autofac, Ninject).
+
+
 ### 7.2. Wzorzec CQRS ###
 ### 7.3. Wzorzec Unit of work ###
 
