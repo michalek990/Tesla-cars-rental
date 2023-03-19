@@ -23,7 +23,7 @@ public class CarRepostitory : BaseRepository<Car>, ICarRepository
         return await Context.Cars
             .Where(c => c.Model == model && c.RentalPointId == rentalPointId)
             .Select(c => c.Available == true)
-            .FirstOrDefaultAsync();
+            .AnyAsync();
         
     }
     

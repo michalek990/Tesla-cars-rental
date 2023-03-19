@@ -6,7 +6,11 @@ namespace backend.Models;
 public sealed class GetCarByRentalPointDto
 {
     public string Model { get; set; }
+    public decimal HorsePower { get; set; }
     public string VIN { get; set; }
+    public int YearOfProduction { get; set; }
+    public bool Available { get; set; }
+    public double CostPerDay { get; set; }
     public int RentalPointId { get; set; }
 }
 

@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 import styles from "./styles.module.css";
+
 const AddRental = () => {
   let [data, setData] = useState({
     FirstName: "",
@@ -9,33 +10,38 @@ const AddRental = () => {
     PeselNumber: "",
     ContactNumber: 0,
     Nationality: "",
-    Gender: "Male",
+    Gender: "",
     RentalDateEnd: useRef(null),
     CarModel: "",
     StartRentalPointName: "",
     EndRentalPointName: ""
   });
 
-
-  const [error, setError] = useState("");
-
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData({ ...data, [name]: /^-?\d+$/.test(value) ? parseInt(value) : value });  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      
       const url = 'https://localhost:7267/api/rentals';
       console.log(data);
       const { data: res } = await axios.post(url, data);
-      console.log(res.message);
+      navigate('/');
     } catch (error) {
-      if (error.response) {
-        console.log(JSON.stringify(error))
-
-        //setError(error);
+      console.log(error);
+      if (error.response.data.status === 400) {
+        console.log(data);
+        setError("Check your input data");
       }
+      else if(error.response.data.statusCode === 409){
+        setError(error.response.data.details);
+      }
+      else if(error.response.data.statusCode === 404)
+        setError(error.response.data.details);
+      else if(error.response.data.statusCode === 500)
+        setError(error.response.data.details);
     }
   };
   return (
@@ -43,7 +49,7 @@ const AddRental = () => {
       <div className={styles.signup_form_container}>
         <div className={styles.left}>
           <h1>Tesla cars rental</h1> 
-            <Link to="/Main">
+            <Link to="/GetAllRentalPoints">
               <button type="button" className={styles.white_btn}>
                 Zobacz nasze auta i placówki
               </button>
@@ -95,7 +101,7 @@ const AddRental = () => {
             />
             <h3>Nationality</h3>
             <input
-              type = "text"
+              type="text"
               placeholder="Nationality"
               name="Nationality"
               onChange={handleChange}
@@ -106,7 +112,7 @@ const AddRental = () => {
 
             <h3>Gender</h3>
             <input
-              type = "text"
+              type="text"
               placeholder="Gender"
               name="Gender"
               onChange={handleChange}
