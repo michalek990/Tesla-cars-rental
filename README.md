@@ -52,6 +52,7 @@ Wzorzec CQRS (Command-Query Responsibility Segregation) to wzorzec projektowy st
 Wzorzec ten zakłada, że aplikacja posiada dwa osobne modele: model komend (Command Model) i model zapytań (Query Model). Model komend służy do obsługi żądań dotyczących zmiany stanu systemu, takich jak dodawanie, aktualizowanie lub usuwanie danych, a model zapytań służy do obsługi zapytań o odczyt danych.
 
 Dzięki zastosowaniu wzorca CQRS, możliwe jest zoptymalizowanie wydajności aplikacji poprzez zoptymalizowanie modelu zapytań i modelu komend. Model zapytań może być np. w pełni zdenormalizowany, co pozwala na szybsze wykonywanie zapytań, a model komend może być zoptymalizowany pod kątem szybkiego i bezpiecznego wprowadzania zmian w systemie.
+
 ![image](https://user-images.githubusercontent.com/93988101/226204924-098b086a-459a-40dd-ba40-b41392979ad8.png)
 
 ### 7.3. Wzorzec Unit of work ###
@@ -62,6 +63,7 @@ Wzorzec ten składa się z dwóch głównych elementów: Unit of Work oraz Repoz
 Unit of Work to klasa, która reprezentuje jedną transakcję na bazie danych i umożliwia grupowanie operacji na kilku repozytoriach. W Unit of Work zawarte są metody, które umożliwiają dodawanie, usuwanie i aktualizację rekordów w bazie danych.
 
 Repozytorium to interfejs lub klasa, która definiuje metody dostępu do danych, takie jak pobieranie, dodawanie, usuwanie i aktualizacja rekordów w bazie danych. Repozytoria są używane w Unit of Work, aby umożliwić grupowanie operacji na różnych encjach w ramach jednej transakcji.
+
 ![image](https://user-images.githubusercontent.com/93988101/226204961-ef5a0115-cae0-46bc-a0c4-bbf19f7e091a.png)
 
 
