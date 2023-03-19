@@ -43,6 +43,7 @@ public class DataBaseSeeder
                         VIN = "LPgULh7gdSizpUOBP",
                         YearOfProduction = 2017,
                         Available = true,
+                        CostPerDay = 200.0
                     },
                     new Car()
                     {
@@ -51,6 +52,7 @@ public class DataBaseSeeder
                         VIN = "V4Jp4ykabTtedWRYE",
                         YearOfProduction = 2020,
                         Available = true,
+                        CostPerDay = 100.0
                     },
                     new Car()
                     {
@@ -59,6 +61,7 @@ public class DataBaseSeeder
                         VIN = "x7D2B4h9U1J2iZX7E",
                         YearOfProduction = 2019,
                         Available = true,
+                        CostPerDay = 150.0
                     }
                 }
             },
@@ -77,6 +80,7 @@ public class DataBaseSeeder
                         VIN = "JhVbz6VXiRkV4MrAW",
                         YearOfProduction = 2020,
                         Available = true,
+                        CostPerDay = 150.0
                     },
                     new Car()
                     {
@@ -85,6 +89,7 @@ public class DataBaseSeeder
                         VIN = "Xdqnvg67nAVCE7w1p",
                         YearOfProduction = 2019,
                         Available = true,
+                        CostPerDay = 200.0
                     },
                     new Car()
                     {
@@ -93,6 +98,7 @@ public class DataBaseSeeder
                         VIN = "asWdh8fSgalQvkvfL",
                         YearOfProduction = 2018,
                         Available = true,
+                        CostPerDay = 200.0
                     }
                 }
             },
@@ -111,6 +117,7 @@ public class DataBaseSeeder
                         VIN = "CxJtAeGfodDFhtGXO",
                         YearOfProduction = 2017,
                         Available = true,
+                        CostPerDay = 200.0
                     },
                     new Car()
                     {
@@ -119,6 +126,7 @@ public class DataBaseSeeder
                         VIN = "j4g3waxs7jI4vEW3r",
                         YearOfProduction = 2016,
                         Available = true,
+                        CostPerDay = 70.0
                     },
                     new Car()
                     {
@@ -127,6 +135,7 @@ public class DataBaseSeeder
                         VIN = "4qZIvwuzTzb0lImxR",
                         YearOfProduction = 2016,
                         Available = true,
+                        CostPerDay = 150.0
                     }
                 }
             },
@@ -143,24 +152,27 @@ public class DataBaseSeeder
                         Model = "Tesla Model X",
                         HorsePower = 270,
                         VIN = "yb8d72gZbRaodHqct",
-                        YearOfProduction = 0,
+                        YearOfProduction = 2020,
                         Available = true,
+                        CostPerDay = 150.0
                     },
                     new Car()
                     {
                         Model = "Tesla Model Y",
                         HorsePower = 350,
                         VIN = "d1CyXniT1IvL1XwOn",
-                        YearOfProduction = 0,
+                        YearOfProduction = 2021,
                         Available = true,
+                        CostPerDay = 70.0
                     },
                     new Car()
                     {
                         Model = "Tesla Model 3",
                         HorsePower = 400,
                         VIN = "v0YgbjvnLL7Rod1Le",
-                        YearOfProduction = 0,
+                        YearOfProduction = 2022,
                         Available = true,
+                        CostPerDay = 100.0
                     }
                 }
             }

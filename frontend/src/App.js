@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Routes, Navigate } from "react-router-dom";
+import Main from "./components/Main/Main.jsx"
+import AddRental from "./components/AddRental/AddRental.jsx";
+import GetAllRentalPoints from "./components/GetAllRentalPoints/GetAllRentalPoints.jsx";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/AddRental" exact element={<AddRental />} />
+      <Route path="/GetAllRentalPoints" exact element={<GetAllRentalPoints />} />
+      <Route path="/" exact element={<Main />} />
+    </Routes>
   );
 }
-
 export default App;
