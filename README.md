@@ -116,3 +116,19 @@ wszystkie dostępne kompenenty oraz Routy. Aplikacja będzie składa się ze 3 s
 
 ## 12. Połączenie strony serwerowej i klienckiej ## 
 Przy uzyciu axios udało się połączyć te dwie aplikacje oraz umożliwiło to pobieranie danych z serwera jak i wysyłanie ich na serwer.
+
+
+## Jak działa aplikacja ## 
+Aplikacja umożliwia nam stworzenie nowego wypożyczenia na jedno z aut marki Tesla na słonecznej Majorce. Mamy do dyspozycji wszystkie aktualnie dostępne auta marki Tesla, które rozmieszczone są w czterech punktach wypożyczeń: Palma Airport, Palma City Center, Alcudia, Manacor. Aplikacja miała zakładać tworzenie nowych wypożyczeń dlatego tabele związane z samochodami i placówkami zostały wypełnione z góry narzuconymi danymi, co ułatwia pracę przy projeckie. Zostały utworzone podstawowe operacje CRUD dla tabel co umożliwia nam takie funckje jak np. podgląd wszytskich aut lub podgląd wszystkich aut w konkretnej wypożyczalni. Tworzenie wypożyczenia będzie wymagało nas podania podstawowych danych osobowych oraz określenia jakie auto nas interesuje oraz podanie punktu początkowego oraz końcowego naszej przygody z autem. W tym miejscu działa pełna walidacja, która uniemożliwia wprowadzania błędnych danych m.in: 
+1. Nazwa placówki, z której bierzemy lub oddajemy auto musi mieć poprawną nazwę
+2. Nazwa modelu auta także musi być poprawna
+3. Data końca wypożyczenia musi być większa od teraźniejszej daty oraz nie możliwe jest wypożyczenie auta na więcej niż 20 dni.
+
+Data początkowa wypozyczenia jest ustawiona na teraźniejszą co sprawia, że już w momencie tworzenia wypożyczenia auto staje się naszą własnością. Dodatkowo każde auto ma swój koszt jak musimy zapłacić za dzień. W dalszej częsci przeliczana jest ilośc dni w konkretnym wypozyczeniu i do tabeli z wypożyczeniami dopisana jest kwota końcowa. W momencie tworzenia nowego wypożyczenia pobieramy informacje o wybranym aucie oraz zmieniamy mu status na ,,niedostępne" co uniemożliwia nam wypożyczenia go przez kolejną osobę. Podczas działania aplikacji, wykonywana jest operacja w tle, która na bieżąco sprawdza czy jakiś rekord w tabeli wypożyczeń nie ma zapisanej daty końcowej wypozyczenia, która jest mniejsza niż data teraźniejsza. Jeśli znajdzie taką to usuwa danyc rekord z tabeli oraz zmienia status danego auta na ,,dostępne".
+
+## TODO ## 
+Aplikacja oczywiście może być rozbudowana o nowe funckje oraz udoskonalona pod wzgledem różnych funckckonalności np:
+1. Poprawienie strony klienckiej pod względem połączenia z serwerem. Refaktor kodu.
+2. Wprowadzenie tabeli z użytkownikami oraz stworzenia możliwości logowania.
+3. Sprawdzanie czy dane wypożyczenie jest opłacone czy nie oraz pobieranie od użytkownika konkretnych kwot. W sytuacji kiedy mielibyśmy konta użytkownika sprawdzalibysmy także warunki, czy użytkownik ma odpowiednia kwote do opłacenia wypożyczenia.
+4. Dodanie więcej stron po stronie klienckiej, aby wyświetlić więcej informacji
