@@ -105,3 +105,14 @@ Implementacja pierwszych funkcji CRUD odnieśnie tworzenia nowego wypożyczenia.
 <p align="center">
 <img src="https://user-images.githubusercontent.com/93988101/226205355-853f99e5-edc0-49a2-8496-43d24ff85ab3.png">
 </p>
+
+## 11. Implementacja strony klienckiej ## 
+Rozpoczęcie pracy nad stroną frontendu. Implementacja nowego projektu React oraz instalacja potrzbnych bibliotek. W dalszej kolejności zaimplementowane zostały
+wszystkie dostępne kompenenty oraz Routy. Aplikacja będzie składa się ze 3 stron: Main, newRental oraz GetAllCarsFromRentalPoint. Jesteśmy w stanie tworzyć nowe wypożyczenie auta oraz podejrzeć wszystkie auta oraz ich dostępność.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/93988101/226205759-2958e6d1-b282-433e-86eb-5d38362be35f.png">
+</p>
+
+## 12. Połączenie strony serwerowej i klienckiej ## 
+Przy uzyciu axios udało się połączyć te dwie aplikacje oraz umożliwiło to pobieranie danych z serwera jak i wysyłanie ich na serwer.
