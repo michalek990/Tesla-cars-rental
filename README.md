@@ -47,6 +47,9 @@ Oto kilka kroków, które warto uwzględnić przy tworzeniu repozytoriów w C#:
 
 3. Utworzenie kontekstu bazy danych - kontekst bazy danych służy do zarządzania połączeniem z bazą danych oraz śledzeniem zmian. Kontekst ten powinien być wstrzykiwany do repozytoriów za pomocą narzędzia do wstrzykiwania zależności (np. Autofac, Ninject).
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/93988101/226205284-0f7e027b-fe67-487a-9854-e3b16802aaec.png">
+</p>
 
 ### 7.2. Wzorzec CQRS ###
 Wzorzec CQRS (Command-Query Responsibility Segregation) to wzorzec projektowy stosowany w projektowaniu aplikacji, który ma na celu oddzielenie logiki zapisu danych (Command) od logiki odczytu danych (Query).
